@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "qq/NjuRzX+NAyYL7TUXyTcJFD5dcj9csq0pNxCXQ42c=",
+  "Source": "ExamSystemAPI",
+  "BasePath": "_content/ExamSystemAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
