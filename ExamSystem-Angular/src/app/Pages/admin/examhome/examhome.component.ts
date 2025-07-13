@@ -5,11 +5,13 @@ import { Exam } from '../../../core/interface/exam';
 import { AddExamComponent } from '../add-exam/add-exam.component';
 import { EditExamComponent } from "../edit-exam/edit-exam.component";
 import { RouterLink } from '@angular/router';
+import { NavbarComponent } from '../../../Layout/navbar/navbar.component';
+import { FooterComponent } from '../../../Layout/footer/footer.component';
 
 @Component({
   selector: 'app-examhome',
   standalone: true,
-  imports: [CommonModule, AddExamComponent, EditExamComponent,RouterLink],
+  imports: [CommonModule, AddExamComponent, EditExamComponent,RouterLink,NavbarComponent,FooterComponent],
   templateUrl: './examhome.component.html',
   styleUrl: './examhome.component.scss'
 })
