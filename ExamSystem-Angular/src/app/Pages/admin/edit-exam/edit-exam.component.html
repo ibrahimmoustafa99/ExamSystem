@@ -1,0 +1,39 @@
+
+<form [formGroup]="examForm" (ngSubmit)="updateExam()" class="exam-form">
+  <label>Title</label>
+  <input formControlName="title" placeholder="Exam Title" />
+
+  <label>Description</label>
+  <textarea formControlName="description" placeholder="Description"></textarea>
+
+  <!-- <label>Created By</label>
+  <input formControlName="createdBy" type="number" />
+
+  <label>Created By Name</label>
+  <input formControlName="createdByName" /> -->
+
+  <h4>Questions</h4>
+  <div formArrayName="questions">
+    <div *ngFor="let q of questions.controls; let i = index" [formGroupName]="i" class="question-block">
+      <label>Text</label>
+      <input formControlName="text" />
+
+      <div class="choices">
+        <label>A</label><input formControlName="choiceA" />
+        <label>B</label><input formControlName="choiceB" />
+        <label>C</label><input formControlName="choiceC" />
+        <label>D</label><input formControlName="choiceD" />
+      </div>
+
+      <label>Correct Answer</label>
+      <input formControlName="correctAnswer" />
+
+      <button type="button" (click)="removeQuestion(i)">🗑 Remove</button>
+    </div>
+  </div>
+
+  <button type="button" class="btn" (click)="addQuestion()">➕ Add Question</button>
+  <br /><br />
+  <button type="submit" class="btn" [disabled]="examForm.invalid">✏️ Update Exam</button>
+  <button type="button" class="btn" (click)="cancelEdit()">❌ Cancel</button>
+</form>

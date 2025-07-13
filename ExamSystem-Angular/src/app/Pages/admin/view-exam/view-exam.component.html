@@ -1,0 +1,24 @@
+<div class="view-exam-container" *ngIf="exam && !loading">
+  <button class="back-btn" routerLink="/AdminDashboard"> ← Back to Exmas</button>
+
+  <h2>{{ exam.title }}</h2>
+  <p><strong>Description:</strong> {{ exam.description }}</p>
+  <p><strong>Created By:</strong> {{ exam.createdByName }}</p>
+
+  <h3>Questions</h3>
+
+  <div class="question" *ngFor="let q of exam.questions; let i = index">
+    <p><strong>Q{{ i + 1 }}:</strong> {{ q.text }}</p>
+    <ul>
+      <li><strong>A:</strong> {{ q.choiceA }}</li>
+      <li><strong>B:</strong> {{ q.choiceB }}</li>
+      <li><strong>C:</strong> {{ q.choiceC }}</li>
+      <li><strong>D:</strong> {{ q.choiceD }}</li>
+    </ul>
+    <p class="correct">✔️ Correct Answer: {{ q.correctAnswer }}</p>
+  </div>
+</div>
+
+<!-- Optional loading/error states -->
+<div *ngIf="loading">Loading exam...</div>
+<div *ngIf="!loading && !exam">Exam not found.</div>

@@ -1,0 +1,43 @@
+<div class="exam-container">
+  <button (click)="showForm = !showForm" class="btn m-2" *ngIf="!showEditForm">
+    {{ showForm ? '❌ Cancel' : '➕ Add Exam' }}
+  </button>
+  
+
+    <app-edit-exam
+    *ngIf="editingExam"
+    [exam]="editingExam"
+    (examUpdated)="onExamUpdated($event)"
+    (cancel)="cancelEdit()">
+    </app-edit-exam>
+
+
+  <app-add-exam
+    *ngIf="showForm"
+    (examCreated)="onExamCreated($event)"
+    (cancel)="showForm = false">
+  </app-add-exam>
+
+  <p *ngIf="loading">Loading exams...</p>
+  <p *ngIf="errorMsg" class="error-text">{{ errorMsg }}</p>
+
+
+
+  <div *ngIf="!showForm && !showEditForm" class="grid">
+    <div class="card" *ngFor="let exam of exams">
+      <div class="card-header">
+        <h2>{{ exam.title }}</h2>
+      </div>
+      <div class="card-body">
+        <p><strong>Description:</strong> {{ exam.description }}</p>
+        <p><strong>Created By:</strong> {{exam.createdByName}}</p>
+        <p><strong>Number Of Q:</strong> {{exam.questions.length}}</p>
+      </div>
+      <div class="card-footer">
+        <a class="btn bg-success" [routerLink]="['/exam/view', exam.id]">👁️ View</a>
+        <button (click)="editExam(exam)" class="edit-btn">✏️ Edit</button>
+        <button (click)="deleteExam(exam.id)" class="delete-btn">🗑️ Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
