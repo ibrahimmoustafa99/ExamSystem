@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ITI-TANTA\\Projects\\ExamSystemAPI\\ExamSystemAPI\\ExamSystemAPI.csproj": {}
+    "E:\\Project\\ExamSystem\\ExamSystemAPI\\ExamSystemAPI\\ExamSystemAPI.csproj": {}
   },
   "projects": {
-    "D:\\ITI-TANTA\\Projects\\ExamSystemAPI\\ExamSystemAPI\\ExamSystemAPI.csproj": {
+    "E:\\Project\\ExamSystem\\ExamSystemAPI\\ExamSystemAPI\\ExamSystemAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ITI-TANTA\\Projects\\ExamSystemAPI\\ExamSystemAPI\\ExamSystemAPI.csproj",
+        "projectUniqueName": "E:\\Project\\ExamSystem\\ExamSystemAPI\\ExamSystemAPI\\ExamSystemAPI.csproj",
         "projectName": "ExamSystemAPI",
-        "projectPath": "D:\\ITI-TANTA\\Projects\\ExamSystemAPI\\ExamSystemAPI\\ExamSystemAPI.csproj",
-        "packagesPath": "C:\\Users\\elhad\\.nuget\\packages\\",
-        "outputPath": "D:\\ITI-TANTA\\Projects\\ExamSystemAPI\\ExamSystemAPI\\obj\\",
+        "projectPath": "E:\\Project\\ExamSystem\\ExamSystemAPI\\ExamSystemAPI\\ExamSystemAPI.csproj",
+        "packagesPath": "C:\\Users\\Moaz\\.nuget\\packages\\",
+        "outputPath": "E:\\Project\\ExamSystem\\ExamSystemAPI\\ExamSystemAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\elhad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Moaz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -104,7 +104,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
