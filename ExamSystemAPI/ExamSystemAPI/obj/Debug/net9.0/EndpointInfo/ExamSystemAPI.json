@@ -428,6 +428,14 @@
               "type": "integer",
               "format": "int32"
             }
+          },
+          {
+            "name": "studentId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
           }
         ],
         "responses": {
