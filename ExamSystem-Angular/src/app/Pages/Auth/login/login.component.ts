@@ -30,6 +30,8 @@ export class LoginComponent {
           this.auth.saveToken(res.token);
           localStorage.setItem('role', res.role);
           localStorage.setItem('name', res.name);
+          localStorage.setItem('studentId', res.id); 
+          console.log(res)
 
           
           // redirect based on role
