@@ -136,7 +136,7 @@ namespace ExamSystemAPI.Controllers
             }
 
             await _context.SaveChangesAsync();
-            return Ok("Answers submitted successfully.");
+            return Ok(new {message= "Answers submitted successfully." });
         }
 
         [HttpGet("result/{examId}")]
