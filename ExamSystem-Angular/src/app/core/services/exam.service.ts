@@ -8,7 +8,7 @@ import { Exam } from '../interface/exam';
   providedIn: 'root'
 })
 export class ExamService {
-  private urlexam = `${environment.baseUrl}Exam`;
+  private urlexam = 'https://localhost:44302/api/Exam';
 
   constructor(private http: HttpClient) {}
 

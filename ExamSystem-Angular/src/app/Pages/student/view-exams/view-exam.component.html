@@ -1,0 +1,17 @@
+<div class="container mt-4">
+  <h2 class="mb-4">Availabale Exams</h2>
+
+  <div *ngFor="let exam of exams" class="card p-3 mb-3">
+    <h4>{{ exam.title}}</h4>
+    <p>{{ exam.description }}</p>
+    <button class="btn btn-primary" (click)="startExam(exam.id)">
+      Start Exam
+    </button>
+  </div>
+
+  <div *ngIf="exams.length === 0" class="alert alert-info">
+    No exams available.
+  </div>
+</div>
+
+

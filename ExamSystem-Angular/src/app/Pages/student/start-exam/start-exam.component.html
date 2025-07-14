@@ -1,0 +1,39 @@
+<div *ngIf="exam" class="m-5">
+  <h2>{{ exam.title }}</h2>
+  <p>{{ exam.description }}</p>
+
+  <form (ngSubmit)="submitAnswers()">
+    <div *ngFor="let q of exam.questions; let i = index" class="card p-3 my-2">
+      <h5>Q{{ i + 1 }}. {{ q.text }}</h5>
+
+      <label>
+        <input type="radio" name="answer{{i}}" [(ngModel)]="selectedAnswers[i]" value="A" required>
+        {{ q.choiceA }}
+      </label><br>
+
+      <label>
+        <input type="radio" name="answer{{i}}" [(ngModel)]="selectedAnswers[i]" value="B">
+        {{ q.choiceB }}
+      </label><br>
+
+      <label>
+        <input type="radio" name="answer{{i}}" [(ngModel)]="selectedAnswers[i]" value="C">
+        {{ q.choiceC }}
+      </label><br>
+
+      <label>
+        <input type="radio" name="answer{{i}}" [(ngModel)]="selectedAnswers[i]" value="D">
+        {{ q.choiceD }}
+      </label>
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div *ngIf="!exam">
+  <p>Loading exam...</p>
+</div>
+
+
+
