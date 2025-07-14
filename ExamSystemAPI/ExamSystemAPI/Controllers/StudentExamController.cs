@@ -131,5 +131,49 @@ namespace ExamSystemAPI.Controllers
 
             return Ok(result);
         }
+
+        [HttpGet("results/all")]
+        public async Task<ActionResult<IEnumerable<ResultWithStudentDTO>>> GetAllStudentResults()
+        {
+            var exams = await _context.Exams
+                .Include(e => e.Questions)
+                .ToListAsync();
+
+            var allAnswers = await _context.Answers
+                .Include(a => a.Student) // assuming Answer has navigation property: Student (User)
+                .ToListAsync();
+
+            var groupedByStudentExam = allAnswers
+                .GroupBy(a => new { a.StudentId, a.Student.Name, a.Question.ExamId }) // adjust name if needed
+                .ToList();
+
+            var resultList = new List<ResultWithStudentDTO>();
+
+            foreach (var group in groupedByStudentExam)
+            {
+                var exam = exams.FirstOrDefault(e => e.Id == group.Key.ExamId);
+                if (exam == null) continue;
+
+                int total = exam.Questions.Count;
+                int correct = group.Count(a =>
+                {
+                    var question = exam.Questions.FirstOrDefault(q => q.Id == a.QuestionId);
+                    return question != null && question.CorrectAnswer == a.SelectedAnswer;
+                });
+
+                resultList.Add(new ResultWithStudentDTO
+                {
+                    ExamId = exam.Id,
+                    ExamTitle = exam.Title,
+                    StudentId = group.Key.StudentId,
+                    StudentName = group.Key.Name,
+                    TotalQuestions = total,
+                    CorrectAnswers = correct,
+                    Score = total > 0 ? Math.Round((double)correct / total * 100, 2) : 0
+                });
+            }
+
+            return Ok(resultList);
+        }
     }
 }
