@@ -14,6 +14,9 @@ export class StudentExamService {
 getResultByStudentIdAndExamId(studentId: number, examId: number) {
   return this.http.get(`${this.apiUrl}/result/${examId}?studentId=${studentId}`);
 }
+ getById(id: number): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/exams/${id}?studentId=${localStorage.getItem('studentId')}`);
+  }
 
 
 

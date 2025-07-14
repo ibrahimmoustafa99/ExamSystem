@@ -30,7 +30,7 @@ export class StartExamComponent implements OnInit {
 
   ngOnInit(): void {
     this.examId = Number(this.route.snapshot.paramMap.get('id'));
-    this.examService.getById(this.examId).subscribe({
+    this.studentExamService.getById(this.examId).subscribe({
       next: (res) => this.exam = res,
       error: (err) => console.error('Error loading exam:', err)
     });
