@@ -5,10 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F16CFEFA-F7A4-45CE-803F-4A2A200911ED}|ExamSystemAPI\\ExamSystemAPI.csproj|e:\\project\\examsystem\\examsystemapi\\examsystemapi\\controllers\\studentexamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F16CFEFA-F7A4-45CE-803F-4A2A200911ED}|ExamSystemAPI\\ExamSystemAPI.csproj|solutionrelative:examsystemapi\\controllers\\studentexamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F16CFEFA-F7A4-45CE-803F-4A2A200911ED}|ExamSystemAPI\\ExamSystemAPI.csproj|e:\\project\\examsystem\\examsystemapi\\examsystemapi\\dtos\\resultwithstudentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F16CFEFA-F7A4-45CE-803F-4A2A200911ED}|ExamSystemAPI\\ExamSystemAPI.csproj|solutionrelative:examsystemapi\\dtos\\resultwithstudentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,30 +14,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ResultWithStudentDTO.cs",
-              "DocumentMoniker": "E:\\Project\\ExamSystem\\ExamSystemAPI\\ExamSystemAPI\\DTOs\\ResultWithStudentDTO.cs",
-              "RelativeDocumentMoniker": "ExamSystemAPI\\DTOs\\ResultWithStudentDTO.cs",
-              "ToolTip": "E:\\Project\\ExamSystem\\ExamSystemAPI\\ExamSystemAPI\\DTOs\\ResultWithStudentDTO.cs",
-              "RelativeToolTip": "ExamSystemAPI\\DTOs\\ResultWithStudentDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-14T11:04:33.668Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "StudentExamController.cs",
               "DocumentMoniker": "E:\\Project\\ExamSystem\\ExamSystemAPI\\ExamSystemAPI\\Controllers\\StudentExamController.cs",
               "RelativeDocumentMoniker": "ExamSystemAPI\\Controllers\\StudentExamController.cs",
-              "ToolTip": "E:\\Project\\ExamSystem\\ExamSystemAPI\\ExamSystemAPI\\Controllers\\StudentExamController.cs",
-              "RelativeToolTip": "ExamSystemAPI\\Controllers\\StudentExamController.cs",
-              "ViewState": "AgIAAJsAAAAAAAAAAAAiwKkAAAArAAAAAAAAAA==",
+              "ToolTip": "E:\\Project\\ExamSystem\\ExamSystemAPI\\ExamSystemAPI\\Controllers\\StudentExamController.cs*",
+              "RelativeToolTip": "ExamSystemAPI\\Controllers\\StudentExamController.cs*",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAUwHUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-13T21:15:43.435Z",
               "EditorCaption": ""

@@ -45,15 +45,57 @@ namespace ExamSystemAPI.Controllers
         }
 
         //  View Specific Exam (Take Exam)
+        //[HttpGet("exams/{id}")]
+        //public async Task<ActionResult<ExamDTO>> GetExam(int id)
+        //{
+        //    var exam = await _context.Exams
+        //        .Include(e => e.Questions)
+        //        .FirstOrDefaultAsync(e => e.Id == id);
+
+        //    if (exam == null)
+        //        return NotFound();
+
+        //    var dto = new ExamDTO
+        //    {
+        //        Id = exam.Id,
+        //        Title = exam.Title,
+        //        Description = exam.Description,
+        //        Questions = exam.Questions.Select(q => new QuestionDTO
+        //        {
+        //            Id = q.Id,
+        //            Text = q.Text,
+        //            ChoiceA = q.ChoiceA,
+        //            ChoiceB = q.ChoiceB,
+        //            ChoiceC = q.ChoiceC,
+        //            ChoiceD = q.ChoiceD,
+        //            CorrectAnswer = "" //  don’t expose correct answer
+        //        }).ToList()
+        //    };
+
+        //    return Ok(dto);
+        //}
+
+
+
         [HttpGet("exams/{id}")]
-        public async Task<ActionResult<ExamDTO>> GetExam(int id)
+        public async Task<ActionResult<ExamDTO>> GetExam(int id, [FromQuery] int studentId)
         {
             var exam = await _context.Exams
                 .Include(e => e.Questions)
                 .FirstOrDefaultAsync(e => e.Id == id);
 
             if (exam == null)
-                return NotFound();
+                return NotFound("Exam not found.");
+
+            // Get question ids for this exam
+            var questionIds = exam.Questions.Select(q => q.Id).ToList();
+
+            // Check if student has submitted answers for any of these questions
+            var hasAnswered = await _context.Answers
+                .AnyAsync(a => a.StudentId == studentId && questionIds.Contains(a.QuestionId));
+
+            if (hasAnswered)
+                return BadRequest("You have already taken this exam.");
 
             var dto = new ExamDTO
             {
