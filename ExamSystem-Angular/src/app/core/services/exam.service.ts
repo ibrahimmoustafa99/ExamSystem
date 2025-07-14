@@ -8,7 +8,7 @@ import { Exam } from '../interface/exam';
   providedIn: 'root'
 })
 export class ExamService {
-  private urlexam = 'https://localhost:44302/api/Exam';
+  private urlexam = 'https://localhost:44302/api/StudentExam/exams';
 
   constructor(private http: HttpClient) {}
 
