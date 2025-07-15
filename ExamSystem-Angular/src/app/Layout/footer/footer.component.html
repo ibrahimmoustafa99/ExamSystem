@@ -12,16 +12,13 @@
       <div class="col-md-3">
         <h6 class="fw-bold">Quick Links</h6>
         <ul class="list-unstyled">
-          <li *ngIf="role === 'Student'">
-            <a routerLink="/studentdashboard" class="text-decoration-none text-dark">📝 Exams</a>
-          </li>
-          <li *ngIf="role === 'Admin'">
-            <a routerLink="/admindashboard" class="text-decoration-none text-dark">📝 Exams</a>
+
+          <li >
+            <a [routerLink]="role === 'Admin'? '/AdminDashboard':'/studentdashboard' " class="text-decoration-none text-dark">📝 Exams</a>
           </li>
 
-          <li *ngIf="role === 'Student'">
-            <a routerLink="/student-results" class="text-decoration-none text-dark">📊 Results</a>
-          </li>
+
+          
           <li *ngIf="role === 'Admin'">
             <a routerLink="/results" class="text-decoration-none text-dark">📊 Results</a>
           </li>
