@@ -21,6 +21,7 @@ export class StartExamComponent implements OnInit {
   examId!: number;
   exam: any;
   selectedAnswers: string[] = []; 
+  flag: boolean = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -34,7 +35,7 @@ export class StartExamComponent implements OnInit {
     this.examId = Number(this.route.snapshot.paramMap.get('id'));
     this.studentExamService.getById(this.examId).subscribe({
       next: (res) => this.exam = res,
-      error: (err) => console.error('Error loading exam:', err)
+      error: (err) => this.flag= true
     });
   }
 

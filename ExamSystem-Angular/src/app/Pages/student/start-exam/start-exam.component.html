@@ -1,6 +1,17 @@
 <app-navbar></app-navbar>
 
-<div class="container my-5" *ngIf="exam">
+<div class="text-danger" *ngIf="flag">
+  <div class="container my-5">
+    <div class="alert alert-danger text-center">
+      <i class="bi bi-exclamation-triangle-fill me-2"></i>
+      You are not allowed to access this Exam agian . Please start other exam from the exam list.
+    </div>
+  </div>
+</div>
+
+<div *ngIf="!flag">
+
+  <div class="container my-5" *ngIf="exam">
   <div class="mb-4">
     <h2 class="text-primary">{{ exam.title }}</h2>
     <p class="text-muted">{{ exam.description }}</p>
@@ -72,5 +83,8 @@
     Loading exam...
   </div>
 </div>
+
+</div>
+
 
 <app-footer></app-footer>
