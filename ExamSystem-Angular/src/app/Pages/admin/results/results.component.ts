@@ -2,13 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { ResultWithStudentDTO } from '../../../core/interface/result-with-student';
 import { ResultService } from '../../../core/services/result.service';
 import { CommonModule } from '@angular/common';
+import { NavbarComponent } from "../../../Layout/navbar/navbar.component";
+import { FooterComponent } from "../../../Layout/footer/footer.component";
 
 @Component({
   selector: 'app-results',
   standalone: true,
   templateUrl: './results.component.html',
   styleUrl: './results.component.scss',
-  imports: [CommonModule]
+  imports: [CommonModule, NavbarComponent, FooterComponent]
 })
 export class ResultsComponent implements OnInit {
   groupedResults: { [examTitle: string]: ResultWithStudentDTO[] } = {};

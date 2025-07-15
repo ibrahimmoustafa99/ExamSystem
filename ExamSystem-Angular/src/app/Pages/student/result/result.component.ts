@@ -4,10 +4,12 @@ import { Router } from '@angular/router';
 import {StudentExamService } from '../../../core/services/student-exam.service';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
+import { NavbarComponent } from "../../../Layout/navbar/navbar.component";
+import { FooterComponent } from "../../../Layout/footer/footer.component";
 @Component({
   selector: 'app-result',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NavbarComponent, FooterComponent],
   templateUrl: './result.component.html',
   styleUrl: './result.component.scss'
 })

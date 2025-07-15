@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Project\\ExamSystem\\ExamSystemAPI\\ExamSystemAPI\\ExamSystemAPI.csproj": {}
+    "E:\\Project-Angular-Exam System\\ExamSystem\\ExamSystemAPI\\ExamSystemAPI\\ExamSystemAPI.csproj": {}
   },
   "projects": {
-    "E:\\Project\\ExamSystem\\ExamSystemAPI\\ExamSystemAPI\\ExamSystemAPI.csproj": {
+    "E:\\Project-Angular-Exam System\\ExamSystem\\ExamSystemAPI\\ExamSystemAPI\\ExamSystemAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Project\\ExamSystem\\ExamSystemAPI\\ExamSystemAPI\\ExamSystemAPI.csproj",
+        "projectUniqueName": "E:\\Project-Angular-Exam System\\ExamSystem\\ExamSystemAPI\\ExamSystemAPI\\ExamSystemAPI.csproj",
         "projectName": "ExamSystemAPI",
-        "projectPath": "E:\\Project\\ExamSystem\\ExamSystemAPI\\ExamSystemAPI\\ExamSystemAPI.csproj",
+        "projectPath": "E:\\Project-Angular-Exam System\\ExamSystem\\ExamSystemAPI\\ExamSystemAPI\\ExamSystemAPI.csproj",
         "packagesPath": "C:\\Users\\Moaz\\.nuget\\packages\\",
-        "outputPath": "E:\\Project\\ExamSystem\\ExamSystemAPI\\ExamSystemAPI\\obj\\",
+        "outputPath": "E:\\Project-Angular-Exam System\\ExamSystem\\ExamSystemAPI\\ExamSystemAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
