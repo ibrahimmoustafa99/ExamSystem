@@ -1,17 +1,40 @@
-<div class="container mt-4">
-  <h2 class="mb-4">Availabale Exams</h2>
+<app-navbar></app-navbar>
 
-  <div *ngFor="let exam of exams" class="card p-3 mb-3">
-    <h4>{{ exam.title}}</h4>
-    <p>{{ exam.description }}</p>
-    <button class="btn btn-primary" (click)="startExam(exam.id)">
-      Start Exam
-    </button>
+<div class="container mt-5">
+  <h2 class="mb-4 text-primary"><i class="bi bi-journal-text me-2"></i>Available Exams</h2>
+
+  <div *ngIf="exams.length > 0; else noExams">
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover align-middle text-center shadow-sm">
+        <thead class="table-light">
+          <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let exam of exams; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td class="fw-bold text-primary">{{ exam.title }}</td>
+            <td>{{ exam.description }}</td>
+            <td>
+              <button class="btn btn-outline-success btn-sm rounded-pill" (click)="startExam(exam.id)">
+                <i class="bi bi-play-fill me-1"></i> Start Exam
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 
-  <div *ngIf="exams.length === 0" class="alert alert-info">
-    No exams available.
-  </div>
+  <ng-template #noExams>
+    <div class="alert alert-info text-center">
+      <i class="bi bi-info-circle me-1"></i> No exams available at the moment.
+    </div>
+  </ng-template>
 </div>
 
-
+<app-footer></app-footer>

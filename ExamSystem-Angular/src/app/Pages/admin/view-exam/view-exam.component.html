@@ -1,3 +1,4 @@
+<app-navbar></app-navbar>
 <div class="view-exam-container" *ngIf="exam && !loading">
   <button class="back-btn" routerLink="/AdminDashboard"> ← Back to Exmas</button>
 
@@ -22,3 +23,4 @@
 <!-- Optional loading/error states -->
 <div *ngIf="loading">Loading exam...</div>
 <div *ngIf="!loading && !exam">Exam not found.</div>
+<app-footer></app-footer>
