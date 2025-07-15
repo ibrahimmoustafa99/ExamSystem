@@ -1,3 +1,4 @@
+import { Component } from '@angular/core';
 import { Routes } from '@angular/router';
 import { LoginComponent } from './Pages/Auth/login/login.component';
 
@@ -10,6 +11,7 @@ import { UnauthorizedComponent } from './Pages/unauthorized/unauthorized.compone
 import { ExamhomeComponent } from './Pages/admin/examhome/examhome.component';
 import { StartExamComponent } from './Pages/student/start-exam/start-exam.component';
 import { ResultComponent } from './Pages/student/result/result.component';
+import { ResultsComponent } from './Pages/admin/results/results.component';
 
 export const routes: Routes = [
 
@@ -43,8 +45,16 @@ export const routes: Routes = [
   {
   path: 'student/result/:id',
   component: ResultComponent
-}
+},
+  {
+    path: 'exam/view/:id',
+    component: ViewExamComponent
+  }
 ,
+{
+  path: 'results',
+  component: ResultsComponent
+},
    { path: 'unauthorized', component: UnauthorizedComponent },
   { path: '**', redirectTo: 'login' }
 ];

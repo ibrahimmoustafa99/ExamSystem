@@ -3,11 +3,13 @@ import { Exam } from '../../../core/interface/exam';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { ExamService } from '../../../core/services/exam.service';
 import { CommonModule } from '@angular/common';
+import { NavbarComponent } from "../../../Layout/navbar/navbar.component";
+import { FooterComponent } from "../../../Layout/footer/footer.component";
 
 @Component({
   selector: 'app-view-exam',
   standalone: true,
-  imports: [CommonModule,RouterLink],
+  imports: [CommonModule, RouterLink, NavbarComponent, FooterComponent],
   templateUrl: './view-exam.component.html',
   styleUrl: './view-exam.component.scss'
 })

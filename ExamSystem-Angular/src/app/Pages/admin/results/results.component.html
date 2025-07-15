@@ -1,0 +1,59 @@
+<app-navbar></app-navbar>
+<div class="container mt-4">
+  <!-- Loading Spinner -->
+  <div *ngIf="isLoading" class="text-center my-5">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+
+  <!-- Error Message -->
+  <div *ngIf="errorMessage" class="alert alert-danger text-center">
+    {{ errorMessage }}
+  </div>
+
+  <!-- Results Table -->
+  <div *ngIf="!isLoading && !errorMessage && examTitles.length > 0; else noResults">
+    <div *ngFor="let examTitle of examTitles" class="mb-4">
+      <h4 class="text-primary mb-3">{{ examTitle }}</h4>
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+          <thead class="table-light">
+            <tr>
+              <th>#</th>
+              <th>Student Name</th>
+              <th>Total Questions</th>
+              <th>Correct Answers</th>
+              <th>Score</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let result of groupedResults[examTitle]; let i = index">
+              <td>{{ i + 1 }}</td>
+              <td>{{ result.studentName }}</td>
+              <td>{{ result.totalQuestions }}</td>
+              <td>{{ result.correctAnswers }}</td>
+              <td
+                [ngClass]="{
+                  'text-success': result.score >= 75,
+                  'text-warning': result.score >= 50 && result.score < 75,
+                  'text-danger': result.score < 50
+                }"
+              >
+                {{ result.score }}%
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- No Results -->
+  <ng-template #noResults>
+    <div class="alert alert-warning text-center">
+      No results found.
+    </div>
+  </ng-template>
+</div>
+<app-footer></app-footer>

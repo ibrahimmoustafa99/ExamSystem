@@ -4,11 +4,13 @@ import { Exam } from '../../../core/interface/exam';
 import { ExamService } from '../../../core/services/exam.service';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { NavbarComponent } from "../../../Layout/navbar/navbar.component";
+import { FooterComponent } from "../../../Layout/footer/footer.component";
 
 @Component({
   selector: 'app-view-exam',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NavbarComponent, FooterComponent],
   templateUrl: './view-exam.component.html',
   styleUrl: './view-exam.component.scss'
 })

@@ -1,39 +1,90 @@
-<div *ngIf="exam" class="m-5">
-  <h2>{{ exam.title }}</h2>
-  <p>{{ exam.description }}</p>
+<app-navbar></app-navbar>
+
+<div class="text-danger" *ngIf="flag">
+  <div class="container my-5">
+    <div class="alert alert-danger text-center">
+      <i class="bi bi-exclamation-triangle-fill me-2"></i>
+      You are not allowed to access this Exam agian . Please start other exam from the exam list.
+    </div>
+  </div>
+</div>
+
+<div *ngIf="!flag">
+
+  <div class="container my-5" *ngIf="exam">
+  <div class="mb-4">
+    <h2 class="text-primary">{{ exam.title }}</h2>
+    <p class="text-muted">{{ exam.description }}</p>
+  </div>
 
   <form (ngSubmit)="submitAnswers()">
-    <div *ngFor="let q of exam.questions; let i = index" class="card p-3 my-2">
-      <h5>Q{{ i + 1 }}. {{ q.text }}</h5>
+    <div *ngFor="let q of exam.questions; let i = index" class="card shadow-sm border-0 mb-4">
+      <div class="card-body">
+        <h5 class="mb-3 text-dark">Q{{ i + 1 }}. {{ q.text }}</h5>
 
-      <label>
-        <input type="radio" name="answer{{i}}" [(ngModel)]="selectedAnswers[i]" value="A" required>
-        {{ q.choiceA }}
-      </label><br>
+        <div class="form-check mb-2" *ngIf="q.choiceA">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="answer{{i}}"
+            [(ngModel)]="selectedAnswers[i]"
+            [value]="'A'"
+            required
+          />
+          <label class="form-check-label"> {{ q.choiceA }} </label>
+        </div>
 
-      <label>
-        <input type="radio" name="answer{{i}}" [(ngModel)]="selectedAnswers[i]" value="B">
-        {{ q.choiceB }}
-      </label><br>
+        <div class="form-check mb-2" *ngIf="q.choiceB">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="answer{{i}}"
+            [(ngModel)]="selectedAnswers[i]"
+            [value]="'B'"
+          />
+          <label class="form-check-label"> {{ q.choiceB }} </label>
+        </div>
 
-      <label>
-        <input type="radio" name="answer{{i}}" [(ngModel)]="selectedAnswers[i]" value="C">
-        {{ q.choiceC }}
-      </label><br>
+        <div class="form-check mb-2" *ngIf="q.choiceC">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="answer{{i}}"
+            [(ngModel)]="selectedAnswers[i]"
+            [value]="'C'"
+          />
+          <label class="form-check-label"> {{ q.choiceC }} </label>
+        </div>
 
-      <label>
-        <input type="radio" name="answer{{i}}" [(ngModel)]="selectedAnswers[i]" value="D">
-        {{ q.choiceD }}
-      </label>
+        <div class="form-check" *ngIf="q.choiceD">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="answer{{i}}"
+            [(ngModel)]="selectedAnswers[i]"
+            [value]="'D'"
+          />
+          <label class="form-check-label"> {{ q.choiceD }} </label>
+        </div>
+      </div>
     </div>
 
-    <button type="submit" class="btn btn-success">Submit</button>
+    <div class="text-end">
+      <button class="btn btn-success px-4 py-2 rounded-pill shadow" type="submit">
+        <i class="bi bi-check-circle me-1"></i> Submit Exam
+      </button>
+    </div>
   </form>
 </div>
 
-<div *ngIf="!exam">
-  <p>Loading exam...</p>
+<div class="container my-5" *ngIf="!exam">
+  <div class="alert alert-info text-center">
+    <div class="spinner-border text-primary me-2" role="status"></div>
+    Loading exam...
+  </div>
+</div>
+
 </div>
 
 
-
+<app-footer></app-footer>

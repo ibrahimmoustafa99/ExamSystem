@@ -1,10 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\Project\\ExamSystem\\ExamSystemAPI\\",
+  "WorkspaceRootPath": "E:\\Project-Angular-Exam System\\ExamSystem\\ExamSystemAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F16CFEFA-F7A4-45CE-803F-4A2A200911ED}|ExamSystemAPI\\ExamSystemAPI.csproj|e:\\project\\examsystem\\examsystemapi\\examsystemapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{F16CFEFA-F7A4-45CE-803F-4A2A200911ED}|ExamSystemAPI\\ExamSystemAPI.csproj|solutionrelative:examsystemapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{F16CFEFA-F7A4-45CE-803F-4A2A200911ED}|ExamSystemAPI\\ExamSystemAPI.csproj|e:\\project-angular-exam system\\examsystem\\examsystemapi\\examsystemapi\\controllers\\studentexamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F16CFEFA-F7A4-45CE-803F-4A2A200911ED}|ExamSystemAPI\\ExamSystemAPI.csproj|solutionrelative:examsystemapi\\controllers\\studentexamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "E:\\Project\\ExamSystem\\ExamSystemAPI\\ExamSystemAPI\\appsettings.json",
-              "RelativeDocumentMoniker": "ExamSystemAPI\\appsettings.json",
-              "ToolTip": "E:\\Project\\ExamSystem\\ExamSystemAPI\\ExamSystemAPI\\appsettings.json",
-              "RelativeToolTip": "ExamSystemAPI\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-13T15:55:50.13Z",
+              "Title": "StudentExamController.cs",
+              "DocumentMoniker": "E:\\Project-Angular-Exam System\\ExamSystem\\ExamSystemAPI\\ExamSystemAPI\\Controllers\\StudentExamController.cs",
+              "RelativeDocumentMoniker": "ExamSystemAPI\\Controllers\\StudentExamController.cs",
+              "ToolTip": "E:\\Project-Angular-Exam System\\ExamSystem\\ExamSystemAPI\\ExamSystemAPI\\Controllers\\StudentExamController.cs",
+              "RelativeToolTip": "ExamSystemAPI\\Controllers\\StudentExamController.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAADwv9sAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-14T23:49:27.69Z",
               "EditorCaption": ""
             }
           ]

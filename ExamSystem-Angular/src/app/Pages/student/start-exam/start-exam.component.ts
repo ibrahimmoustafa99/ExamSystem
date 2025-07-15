@@ -7,11 +7,13 @@ import { FormsModule  } from '@angular/forms';
 import { Router } from '@angular/router';
 import {StudentExamService } from '../../../core/services/student-exam.service';
 import { HttpClient } from '@angular/common/http';
+import { NavbarComponent } from "../../../Layout/navbar/navbar.component";
+import { FooterComponent } from "../../../Layout/footer/footer.component";
 
 @Component({
   selector: 'app-start-exam',
   standalone: true,
-  imports: [CommonModule,FormsModule ],
+  imports: [CommonModule, FormsModule, NavbarComponent, FooterComponent],
   templateUrl: './start-exam.component.html',
   styleUrl: './start-exam.component.scss'
 })
@@ -19,6 +21,7 @@ export class StartExamComponent implements OnInit {
   examId!: number;
   exam: any;
   selectedAnswers: string[] = []; 
+  flag: boolean = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -30,9 +33,9 @@ export class StartExamComponent implements OnInit {
 
   ngOnInit(): void {
     this.examId = Number(this.route.snapshot.paramMap.get('id'));
-    this.examService.getById(this.examId).subscribe({
+    this.studentExamService.getById(this.examId).subscribe({
       next: (res) => this.exam = res,
-      error: (err) => console.error('Error loading exam:', err)
+      error: (err) => this.flag= true
     });
   }
 
